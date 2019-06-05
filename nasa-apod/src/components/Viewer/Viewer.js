@@ -1,15 +1,22 @@
 import React from 'react';
 import styles from './Viewer.scss';
 import classNames from 'classnames/bind';
-
 const cx = classNames.bind(styles);
 
-const Viewer = ({ mediaType, url, loading }) => {
-    return(
-        <div className={cx('viewer')}>
+const Viewer = ({mediaType, url, loading}) => {
+  if(!url) return null;
 
-        </div>
-    );
+  return (
+    <div className={cx('viewer')}>
+      {
+        mediaType === 'image' ? (
+          <img onClick={() => window.open(url)} src={url} alt="space"/>
+        ) : (
+          <div/>
+        )
+      }
+    </div>
+  );
 };
 
 export default Viewer;
