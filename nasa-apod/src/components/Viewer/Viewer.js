@@ -9,7 +9,7 @@ const Viewer = ({mediaType, url, loading}) => {
   return (
     <div className={cx('viewer')}>
       {
-        mediaType === 'image' ? (
+        mediaType === 'image' ? ( //삼항연산자 사용
           <img onClick={() => window.open(url)} src={url} alt="space"/>
         ) : (
           <div/>
