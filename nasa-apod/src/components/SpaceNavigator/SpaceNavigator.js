@@ -3,6 +3,7 @@ import styles from './SpaceNavigator.scss';
 import classNames from 'classnames/bind';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"; // react-icons가 버전업되서 이렇게 경로를 써줘야한다.
 
+// scss
 const cx = classNames.bind(styles);
 
 const SpaceNavigator = ({ onPrev, onNext }) => {
